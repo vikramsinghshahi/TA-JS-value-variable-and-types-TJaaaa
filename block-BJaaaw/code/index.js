@@ -21,8 +21,11 @@ let a = Number(prompt('enter first number?'));
 
 let b = Number(prompt('enter second number?'));
 
-if (a>b) { alert( `${a} is greater`);}
-   else { alert(`${b} is greater`);};
+if (a>b) {
+   alert( `${a} is greater`);
+  } else {
+      alert(`${b} is greater`);
+    }
    
 
 
@@ -48,13 +51,68 @@ if (housename === "stark") {alert("winter is coming");}
 
 // 5. Convert the above code using`?` terniary operator
 
-(housename ==="stark") ? alert("winter is coming") : alert("all men die") ;
-(housename === "lannister") ? alert(" lannister always pays his debt") : alert("all men die") ;
+(housename ==="stark") ? alert("winter is coming") : (housename === "lannister") ? alert(" A lannister always pays his debt") : alert("all men die") ;
+ 
 
 
 // Switch
 
 // 6. Write a program that takes the number of the month(1 - 12) and alert number of days in the month.
+
+let monthName = prompt(`enter month name `);
+
+switch (monthName) {
+  case "January":(
+    alert(`The number of days are 31`)
+  );
+  break;
+  case "February":(
+    alert(`The number of days are 28`)
+  );
+  break;
+  case "March":(
+    alert(`The number of days are 31`)
+  );
+  break;
+  case "April":(
+    alert(`The number of days are 30`)
+  );
+  break;
+  case "May":(
+    alert(`The number of days are 31`)
+  );
+  break;
+  case "June":(
+    alert(`The number of days are 30`)
+  );
+  break;
+  case "July":(
+    alert(`The number of days are 31`)
+  );
+  break;
+  case "August":(
+    alert(`The number of days are 31`)
+  );
+  break;
+  case "September":(
+    alert(`The number of days are 30`)
+  );
+  break;
+  case "October":(
+    alert(`The number of days are 31`)
+  );
+  break;
+  case "November":(
+    alert(`The number of days are 30`)
+  );
+  break;
+  case "December":(
+    alert(`The number of days are 31`)
+  );
+  break;
+  default: alert(`not a input valid!`);
+  
+}
 
 
 
@@ -65,6 +123,30 @@ if (housename === "stark") {alert("winter is coming");}
   - `Salary > 50000` tax is 30 %
 
 */
+let salary = prompt(`enter the total salary`);
+
+switch (true) {
+  case salary <= 20000:{
+    let tax = (salary * 10)/ 100;
+    alert(`Your inhand salary is ${salary - tax}`);
+    break;
+    }    
+    case salary <= 40000:{
+      let tax = (salary * 20)/ 100;
+      alert(`Your inhand salary is ${salary - tax}`);
+      break;
+    }
+     
+
+   case salary > 50000:{ 
+     let tax = (salary * 30)/ 100;
+    alert(`Your inhand salary is ${salary - tax}`);
+    break;
+   }
+    
+    default: alert(`not a valid salary`);
+
+}
 
 //  if..else vs switch
 
@@ -79,6 +161,38 @@ Implement the condition give below using`if..else` and`switch` statement.
 
 */
 
+let marks = prompt(`enter your marks`);
+
+if (marks > 100){
+  alert(`Marks can't be greater than 100`);
+} else if ((marks > 80)&& (marks < 100)){
+  alert(`Grade A`);
+} else if ((marks > 50)&& (marks < 80)){
+  alert(`Grade B`);
+}else if ((marks > 30)&& (marks < 50)){
+  alert(`Grade C`);
+} else alert(`Grade D`)
+
+
+switch(true){
+  case marks > 100:(
+    alert(`Marks can't be greater than 100`)
+  ); break;
+  case marks>80 && marks<100: (
+    alert(`Grade A`)
+  ); break;
+  case marks >50 && marks<80: (
+    alert(`Grade B`)
+  ); break;
+  case marks >30 && marks<50: (
+    alert(`Grade c`)
+  ); break;
+  default: (alert(`Grade D`));
+  
+}
+
+
+
 /* 9. Weather app
 
   - Ask user to provide the condition of the weather outside by asking `What is the weather like outside?`
@@ -88,3 +202,24 @@ Implement the condition give below using`if..else` and`switch` statement.
   - If`freezing` alert`Get your sweeter on`
   - Anything else should alert`Not a valid input`
 */
+
+let weather = prompt(`What is the weather like outside?`);
+
+switch (true){
+  case weather === "sunny":(
+    alert(`Wear a T-shirt`)
+  ); break;
+  case weather === "rainy":(
+    alert(`Don't forget to take your raincoat`)
+  ); break;
+  case weather === "hot":(
+    alert(`Get a hanky`)
+  ); break;
+  case weather === "rainy":(
+    alert(`Get your sweeter on`)
+  ); break;
+  default:(
+    alert(`Not a valid input`)
+  );
+
+}
