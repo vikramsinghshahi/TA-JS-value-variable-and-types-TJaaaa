@@ -13,17 +13,14 @@ alert(user);
 
 let userName = user;
 
-console.log(user);
-
-console.log(userName);
+console.log(user , userName);
 
 let age = 22 , isLearning = `true` ;
 
 user = `John`
 
-console.log(user);
+console.log(user , userName);
 
-console.log(userName);
 
 
 /* 2.
@@ -42,19 +39,43 @@ alert(sum);
 
 // 3. Complete the following code to make the output be 0 2 4 6 8 10?
 
-for (let j = 0; j <= 10; j=j+1){
-    if (j % 2 === 0) 
+for (let j = 0; j <= 10; j=j+2){
     console.log(j);
 
 }
 
 // 4. Print the odd numbers from 9 to 1 (both inclusive) using a for loop.
 
-
+for (let i = 9; i >= 1; i=i-1){
+    if (i% 2 !== 0){
+        console.log(i);
+    }
+}
 
 // 5. Concat all the numbers from 5 to 0 (both inclusive) in descending order using a while loop. (543210)
 
+let finalstring = "";
+let initialvalue = 5;
+
+while (initialvalue >= 0){
+    finalstring += initialvalue
+    initialvalue--;
+}
+console.log(finalstring);
+
 // 6. Concat all the even numbers from 10 to 0 (both inclusive) in descending order using a while loop. (1086420)
+let finalevenstring = "";
+let initialevenvalue = 10;
+
+while (initialevenvalue >= 0){
+    if (initialevenvalue % 2 === 0){
+        finalevenstring += initialevenvalue ;  
+    }
+    initialevenvalue--;
+}
+console.log(finalevenstring);
+
+
 
 // Comparisoin
 
@@ -70,3 +91,12 @@ Example:
 "hello", -21; // false
 
 */
+
+let num1 = prompt(`enter first number`);
+let num2 = prompt(`enter second number`);
+
+if (isNaN(num1) || isNaN(num2)) {
+    alert(`enter a valid number!`);
+} else{
+    alert(num1 === num2);
+}
